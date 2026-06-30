@@ -45,24 +45,29 @@
   .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.3px;
   }
 
-  .brand-mark {
-    width: 34px; height: 34px;
-    border-radius: 8px;
-    background: var(--accent);
-    display: grid;
-    place-items: center;
-    font-weight: 800;
-    color: #fff;
-    font-size: 0.95rem;
+  .brand-logo {
+    height: 38px;
+    width: auto;
+    display: block;
   }
 
-  .brand-mark span { transform: translateY(-1px); }
+  .brand-divider {
+    width: 1px;
+    height: 26px;
+    background: var(--border);
+  }
+
+  .brand-sub {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 1rem;
+  }
 
   nav a {
     color: var(--text-dim);
@@ -194,14 +199,20 @@
     color: var(--text-dim);
     font-size: 0.85rem;
   }
+
+  @media (max-width: 480px) {
+    .brand-sub { display: none; }
+    .brand-divider { display: none; }
+  }
 </style>
 </head>
 <body>
 
   <header>
     <div class="brand">
-      <div class="brand-mark"><span>Hi</span></div>
-      HiBid Graphic Design Studio
+      <img class="brand-logo" src="https://cdn.hibid.com/cdn/images/logos/hibid//mainlogo.png" alt="HiBid">
+      <span class="brand-divider"></span>
+      <span class="brand-sub">Graphic Design Studio</span>
     </div>
     <nav>
       <a href="#tools">Tools</a>
@@ -217,8 +228,7 @@
 
   <section class="tools" id="tools">
 
-    <!-- TOOL 1 — swap the href with your real URL -->
-    <a class="card" href="#REPLACE-WITH-BANNER-AD-GENERATOR-URL">
+    <a class="card" href="https://ndupler.github.io/HiBid-Universal-Banner-Ad-Generator/">
       <div class="card-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="5" width="18" height="14" rx="2"/>
@@ -236,8 +246,7 @@
       </span>
     </a>
 
-    <!-- TOOL 2 — swap the href with your real URL -->
-    <a class="card" href="#REPLACE-WITH-BROWSER-NOTIFICATION-GENERATOR-URL">
+    <a class="card" href="https://ndupler.github.io/HiBid-Universal-Browser-Notification-Generator/">
       <div class="card-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
