@@ -6,14 +6,14 @@
 <title>HiBid Graphic Design Studio</title>
 <style>
   :root {
-    --bg: #0e0f13;
-    --bg-card: #171922;
-    --bg-card-hover: #1d2030;
-    --accent: #e10600;
-    --accent-soft: #ff3b30;
-    --text: #f4f5f7;
-    --text-dim: #9aa0ad;
-    --border: #262a36;
+    --bg: #0c1320;
+    --bg-card: #131c2e;
+    --bg-card-hover: #1a2942;
+    --accent: #0a6cba;        /* HiBid primary blue */
+    --accent-soft: #2e9be6;   /* brighter blue for accents/hover */
+    --text: #f2f6fb;
+    --text-dim: #93a3b8;
+    --border: #21304a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,8 +25,8 @@
     line-height: 1.6;
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 20% 0%, rgba(225,6,0,0.12), transparent 40%),
-      radial-gradient(circle at 90% 100%, rgba(225,6,0,0.06), transparent 45%);
+      radial-gradient(circle at 20% 0%, rgba(46,155,230,0.14), transparent 40%),
+      radial-gradient(circle at 90% 100%, rgba(10,108,186,0.10), transparent 45%);
   }
 
   header {
@@ -38,7 +38,7 @@
     backdrop-filter: blur(8px);
     position: sticky;
     top: 0;
-    background: rgba(14,15,19,0.7);
+    background: rgba(12,19,32,0.7);
     z-index: 10;
   }
 
@@ -86,7 +86,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent-soft);
-    border: 1px solid rgba(225,6,0,0.4);
+    border: 1px solid rgba(46,155,230,0.4);
     border-radius: 999px;
     padding: 5px 14px;
     margin-bottom: 22px;
@@ -137,7 +137,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(225,6,0,0.08), transparent 60%);
+    background: linear-gradient(135deg, rgba(46,155,230,0.10), transparent 60%);
     opacity: 0;
     transition: opacity 0.25s;
   }
@@ -145,14 +145,14 @@
   .card:hover {
     transform: translateY(-6px);
     background: var(--bg-card-hover);
-    border-color: rgba(225,6,0,0.5);
+    border-color: rgba(46,155,230,0.5);
   }
   .card:hover::before { opacity: 1; }
 
   .card-icon {
     width: 52px; height: 52px;
     border-radius: 12px;
-    background: rgba(225,6,0,0.15);
+    background: rgba(46,155,230,0.15);
     display: grid;
     place-items: center;
     margin-bottom: 22px;
